@@ -48,3 +48,12 @@ build-iPhoneSimulator/
 
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
+
+# Homebrew
+Brewfile.lock.json
+
+# macOS
+.DS_Store
+
+# App
+/downloads
