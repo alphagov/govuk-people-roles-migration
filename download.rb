@@ -9,7 +9,8 @@ def download(rendering_app, document_type, slug, url)
   FileUtils.mkdir_p(File.dirname(filename))
 
   puts url
-  system("wkhtmltoimage", "-q", "--width", "1280", url, filename)
+  system("wkhtmltoimage", "-q", "--width", "1400", url, filename)
+  system("pngquant", filename, "--output", filename, "--force", "--speed", "1", "--skip-if-larger")
 end
 
 def download_person(slug)
